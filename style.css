@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+.content-chat {
+  box-shadow: 0 0 5px 5px #cecece;
+  padding: 15px;
+}
+
+#submit {
+  margin-top: 15px;
+}
+
+#chat {
+  height: 500px;
+  overflow-y: scroll;
+  margin: 15px;
+  padding: 10px;
+  border: 2px solid #cecece;
+}

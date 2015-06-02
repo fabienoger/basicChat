@@ -8,7 +8,7 @@ html, body {
 }
 
 .content-chat {
-  box-shadow: 0 0 5px 5px #cecece;
+  border: 2px solid #046D8B;
   padding: 15px;
 }
 
@@ -22,4 +22,30 @@ html, body {
   margin: 15px;
   padding: 10px;
   border: 2px solid #cecece;
+}
+
+.commandes {
+  padding: 15px 0;
+  border: 2px solid #046D8B;
+  background-color: #E8E8E8;
+}
+
+.commandes ul {
+  list-style-type: none;
+}
+
+.commandes ul li {
+  background-color: #FFF;
+  display: block;
+  padding: 10px;
+  line-height: 35px;
+}
+
+.commandes li span {
+  color: #046D8B;
+  font-weight: bold;
+}
+
+.clear {
+  clear: both;
 }

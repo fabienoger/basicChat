@@ -1,9 +1,11 @@
 var $message = document.getElementById("message");
 var $submit = document.getElementById("submit");
 var $chat = document.getElementById("chat");
+var $tryTime = document.getElementById("tryTime");
 
 
-function showChat() {
+function tryTime() {
+  insertText("");
 }
 
 date = new Date;
@@ -28,5 +30,5 @@ function insertText (msg){
     $message.value = "";
 }
 
-showChat();
+$tryTime.onclick = tryTime;
 $submit.onclick = addMessage;

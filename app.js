@@ -2,6 +2,7 @@ var $message = document.getElementById("message");
 var $submit = document.getElementById("submit");
 var $chat = document.getElementById("chat");
 var $tryTime = document.getElementById("tryTime");
+var $tryReset = document.getElementById("tryReset");
 
 
 function tryTime() {
@@ -14,11 +15,19 @@ function actuTime() {
   return date.getHours()+ "h " + date.getMinutes() + "m " + date.getSeconds()+ "s";
 }
 
+function reset() {
+  $chat.innerHTML = "";
+  $message.value = "";
+}
+
 function addMessage() {
   if($message.value == "/time") {
     insertText("");
   }
-  else if ($message.value == "Bonjour" || $message.value == "bonjour"){
+  else if ($message.value == "/reset") {
+    reset();
+  }
+  else if ($message.value == "Bonjour" || $message.value == "bonjour" || $message.value == "salut" || $message.value == "yo"){
     insertText($message.value);
     insertText("~ SUPER ADMIN ~ Hello !");
   }
@@ -35,5 +44,6 @@ function insertText (msg){
     $message.value = "";
 }
 
+$tryReset.onclick = reset;
 $tryTime.onclick = tryTime;
 $submit.onclick = addMessage;

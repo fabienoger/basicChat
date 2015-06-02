@@ -18,6 +18,10 @@ function addMessage() {
   if($message.value == "/time") {
     insertText("");
   }
+  else if ($message.value == "Bonjour" || $message.value == "bonjour"){
+    insertText($message.value);
+    insertText("~ SUPER ADMIN ~ Hello !");
+  }
   else if ($message.value != "" && $message.value != " ") {
     insertText($message.value);
   }

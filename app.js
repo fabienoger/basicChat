@@ -5,26 +5,27 @@ var $tryTime = document.getElementById("tryTime");
 
 
 function tryTime() {
+  actuTime();
   insertText("");
 }
 
-date = new Date;
-dateH = date.getHours();
-dateM = date.getMinutes();
-dateS = date.getSeconds();
+function actuTime() {
+  date = new Date();
+  return date.getHours()+ "h " + date.getMinutes() + "m " + date.getSeconds()+ "s";
+}
 
 function addMessage() {
   if($message.value == "/time") {
     insertText("");
   }
-  else {
+  else if ($message.value != "" && $message.value != " ") {
     insertText($message.value);
   }
 }
 
 function insertText (msg){
     var node = document.createElement("p");
-    var textNode = document.createTextNode(dateH + "h " + dateM + "m " + dateS + "s : " + msg);
+    var textNode = document.createTextNode(actuTime() + " : " + msg);
     node.appendChild(textNode);
     $chat.insertBefore(node, $chat.childNodes[0]);
     $message.value = "";
